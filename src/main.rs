@@ -1,5 +1,6 @@
 mod hello;
+mod primitives;
 
 fn main() {
-    hello::hello_formating();
+    primitives::primitives_literals();
 }
