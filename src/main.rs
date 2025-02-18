@@ -1,5 +1,5 @@
 mod hello;
 
 fn main() {
-    hello::hello_display();
+    hello::hello_formating();
 }
