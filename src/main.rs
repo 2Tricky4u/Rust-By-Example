@@ -1,6 +1,7 @@
 mod hello;
 mod primitives;
+mod custom_types;
 
 fn main() {
-    primitives::primitives_literals();
+    custom_types::customs_linked_list();
 }
