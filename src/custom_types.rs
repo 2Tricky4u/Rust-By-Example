@@ -281,3 +281,20 @@ pub (crate) fn customs_linked_list() {
     println!("linked list has length: {}", list.len());
     println!("{}", list.stringify());
 }
+
+pub (crate) fn customs_const() {
+fn is_big(n: i32) -> bool {
+    // Access constant in some function
+    n > crate::THRESHOLD
+}
+    let n = 16;
+
+    // Access constant in the main thread
+    println!("This is {}", crate::LANGUAGE);
+    println!("The threshold is {}", crate::THRESHOLD);
+    println!("{} is {}", n, if is_big(n) { "big" } else { "small" });
+
+    // Error! Cannot modify a `const`.
+    //crate::THRESHOLD = 5;
+    // FIXME ^ Comment out this line
+}
